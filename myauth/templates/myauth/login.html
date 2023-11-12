@@ -1,0 +1,17 @@
+{% extends 'myauth/base.html' %}
+
+{% block Title %}
+
+    Login
+
+        {% endblock %}
+
+{% block body %}
+    <from method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    </from>
+    <button type="submit">
+    Login
+    </button>
+{% endblock %}
